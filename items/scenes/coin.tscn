@@ -1,9 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://djg5ppgmmrx6g"]
 
-[ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_pyg8h"]
+[ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_q8paj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sjhpf"]
-atlas = ExtResource("1_pyg8h")
+atlas = ExtResource("1_q8paj")
 region = Rect2(374, 68, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w5kwj"]

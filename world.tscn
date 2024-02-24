@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7co3k5ljpio0"]
 
 [ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_s71am"]
-[ext_resource type="PackedScene" uid="uid://spqde775vlw" path="res://player.tscn" id="2_koljr"]
-[ext_resource type="PackedScene" uid="uid://cexc0l6igt8xi" path="res://pickup.tscn" id="3_dtc3j"]
+[ext_resource type="PackedScene" uid="uid://spqde775vlw" path="res://player/player.tscn" id="2_koljr"]
+[ext_resource type="PackedScene" uid="uid://cexc0l6igt8xi" path="res://pickup/pickup.tscn" id="3_dtc3j"]
 [ext_resource type="Resource" uid="uid://chhm23tgepbp8" path="res://items/staff.tres" id="4_bvjkh"]
 [ext_resource type="Resource" uid="uid://e83a7lv628ew" path="res://items/coin.tres" id="4_oabba"]
 

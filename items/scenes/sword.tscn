@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://4eaxtsbw24qx"]
 
-[ext_resource type="Script" path="res://Sword.gd" id="1_ptmao"]
-[ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="2_f838r"]
+[ext_resource type="Script" path="res://items/scripts/Sword.gd" id="1_ivh4b"]
+[ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="2_m22i6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3y2ep"]
-atlas = ExtResource("2_f838r")
+atlas = ExtResource("2_m22i6")
 region = Rect2(544, 153, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ca0cb"]
@@ -20,7 +20,7 @@ animations = [{
 
 [node name="Sword" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_ptmao")
+script = ExtResource("1_ivh4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
