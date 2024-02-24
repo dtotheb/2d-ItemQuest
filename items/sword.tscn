@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://4eaxtsbw24qx"]
+
+[ext_resource type="Script" path="res://Sword.gd" id="1_ptmao"]
+[ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="2_f838r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y2ep"]
+atlas = ExtResource("2_f838r")
+region = Rect2(544, 153, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ca0cb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3y2ep")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Sword" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_ptmao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+rotation = -0.785398
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_ca0cb")

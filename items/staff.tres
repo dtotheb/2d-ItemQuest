@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://chhm23tgepbp8"]
+
+[ext_resource type="PackedScene" uid="uid://bj07r6r3m6xlr" path="res://items/staff.tscn" id="1_7dy2h"]
+[ext_resource type="Script" path="res://items/item.gd" id="1_oq7rq"]
+
+[resource]
+script = ExtResource("1_oq7rq")
+name = "Staff"
+scene = ExtResource("1_7dy2h")
+type = "weapon"

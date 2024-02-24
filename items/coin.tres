@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://e83a7lv628ew"]
+
+[ext_resource type="PackedScene" uid="uid://djg5ppgmmrx6g" path="res://items/coin.tscn" id="1_7l6qd"]
+[ext_resource type="Script" path="res://items/item.gd" id="1_svm1u"]
+
+[resource]
+script = ExtResource("1_svm1u")
+name = "Gold Coin"
+scene = ExtResource("1_7l6qd")
+type = "coin"

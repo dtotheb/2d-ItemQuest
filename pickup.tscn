@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cexc0l6igt8xi"]
+
+[ext_resource type="Script" path="res://Pickup.gd" id="1_llcmc"]
+[ext_resource type="Resource" uid="uid://28m5hts1gdxq" path="res://items/sword.tres" id="2_mpbwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmfng"]
+size = Vector2(12, 11)
+
+[node name="Pickup" type="Node2D"]
+script = ExtResource("1_llcmc")
+item = ExtResource("2_mpbwc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_rmfng")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
