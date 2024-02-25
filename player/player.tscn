@@ -88,3 +88,6 @@ animation = &"idle"
 texture_filter = 1
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_okj81")
+
+[node name="Hand" type="Node2D" parent="."]
+position = Vector2(6, 4)

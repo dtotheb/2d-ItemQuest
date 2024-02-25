@@ -24,6 +24,7 @@ script = ExtResource("1_ivh4b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(8.25823e-08, -9)
 rotation = -0.785398
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_ca0cb")

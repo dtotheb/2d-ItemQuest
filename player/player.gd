@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 var myWeapon = null
-
+var inventory:Inventory = Inventory.new()
 
 func _physics_process(delta):
 
@@ -30,15 +30,13 @@ func pickupWeapon(weapon:Item):
 	if myWeapon == null:
 		myWeapon = weapon
 		var newWeapon = weapon.scene.instantiate()
-		newWeapon.position
-		add_child(newWeapon)
+		$Hand.add_child(newWeapon)
 	else:
 		print("already have a ", myWeapon.name)
 	
 
 func _on_item_pickup(item:Item):
 	print("Player got a ", item.name)
-	if item.type == "weapon":
-		pickupWeapon(item)
+	inventory.add_item(item)
 
 	pass

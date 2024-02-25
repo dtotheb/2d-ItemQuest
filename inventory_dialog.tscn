@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv5a2t8tskcfl"]
+
+[ext_resource type="Script" path="res://inventory_dialog.gd" id="1_ikhb3"]
+[ext_resource type="PackedScene" uid="uid://bgsx41vqrlcqo" path="res://item_slot.tscn" id="2_mq26a"]
+
+[node name="InventoryDialog" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+script = ExtResource("1_ikhb3")
+slot_scene = ExtResource("2_mq26a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "My Stuff"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "X
+"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 5
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
