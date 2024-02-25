@@ -4,5 +4,4 @@ extends PanelContainer
 
 func display(item:Item):
 	texture_rect.texture = item.icon	
-	texture_rect.texture
 	

@@ -5,7 +5,7 @@ const SPEED = 300.0
 var myWeapon = null
 var inventory:Inventory = Inventory.new()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 
 
 	# Get the input direction and handle the movement/deceleration.
@@ -32,11 +32,9 @@ func pickupWeapon(weapon:Item):
 		var newWeapon = weapon.scene.instantiate()
 		$Hand.add_child(newWeapon)
 	else:
-		print("already have a ", myWeapon.name)
+		pass
 	
 
 func _on_item_pickup(item:Item):
-	print("Player got a ", item.name)
 	inventory.add_item(item)
 
-	pass
