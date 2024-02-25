@@ -9,10 +9,6 @@ extends PanelContainer
 
 
 
-@onready var grid_container:GridContainer = %GridContainer
-
-
-
 
 
 
