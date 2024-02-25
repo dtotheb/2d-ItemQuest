@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7co3k5ljpio0"]
+[gd_scene load_steps=11 format=3 uid="uid://b7co3k5ljpio0"]
 
 [ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_s71am"]
 [ext_resource type="PackedScene" uid="uid://spqde775vlw" path="res://player/player.tscn" id="2_koljr"]
 [ext_resource type="PackedScene" uid="uid://cexc0l6igt8xi" path="res://pickup/pickup.tscn" id="3_dtc3j"]
 [ext_resource type="Resource" uid="uid://chhm23tgepbp8" path="res://items/staff.tres" id="4_bvjkh"]
 [ext_resource type="Resource" uid="uid://e83a7lv628ew" path="res://items/coin.tres" id="4_oabba"]
-[ext_resource type="PackedScene" uid="uid://cv5a2t8tskcfl" path="res://inventory_dialog.tscn" id="6_oxg4r"]
+[ext_resource type="PackedScene" uid="uid://cv5a2t8tskcfl" path="res://inventoryDialog/inventory_dialog.tscn" id="6_oxg4r"]
 [ext_resource type="Script" path="res://UIRoot.gd" id="6_wwjbj"]
+[ext_resource type="PackedScene" uid="uid://d0vjhdnlqwk47" path="res://craftingDialog/crafting_dialog.tscn" id="8_0alqr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvkp5"]
 texture = ExtResource("1_s71am")
@@ -3293,9 +3294,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -489.0
+offset_bottom = -289.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="CraftingDialog" parent="UIRoot" instance=ExtResource("8_0alqr")]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 383.0
+offset_bottom = 216.0
+grow_horizontal = 1
+grow_vertical = 1

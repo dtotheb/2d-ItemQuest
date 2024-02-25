@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://ucaw6ci1peee"]
+
+[ext_resource type="Texture2D" uid="uid://8gpudde7lv0l" path="res://items/icons/coin-stack.png" id="1_ixd2w"]
+[ext_resource type="Script" path="res://items/scripts/item.gd" id="1_wbslj"]
+[ext_resource type="PackedScene" uid="uid://50smfrexyimk" path="res://items/scenes/coinStack.tscn" id="2_ylllk"]
+
+[resource]
+script = ExtResource("1_wbslj")
+name = "Coin Stack"
+scene = ExtResource("2_ylllk")
+type = "cash"
+icon = ExtResource("1_ixd2w")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7k87xjl1fecd"]
+
+[ext_resource type="Script" path="res://inventoryDialog/item_grid.gd" id="1_ygqvq"]
+[ext_resource type="PackedScene" uid="uid://bgsx41vqrlcqo" path="res://inventoryDialog/item_slot.tscn" id="2_pjuyo"]
+
+[node name="ItemGrid" type="GridContainer"]
+columns = 5
+script = ExtResource("1_ygqvq")
+slot_scene = ExtResource("2_pjuyo")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://50smfrexyimk"]
+
+[ext_resource type="Texture2D" uid="uid://8gpudde7lv0l" path="res://items/icons/coin-stack.png" id="1_at4pw"]
+
+[node name="CoinStack" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_at4pw")
