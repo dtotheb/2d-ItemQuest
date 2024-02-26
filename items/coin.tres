@@ -8,5 +8,5 @@
 script = ExtResource("1_svm1u")
 name = "Gold Coin"
 scene = ExtResource("1_7l6qd")
-type = "coin"
+type = "cash"
 icon = ExtResource("1_wxowy")

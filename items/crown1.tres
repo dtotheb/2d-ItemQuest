@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_nrvcm")
-name = "King's Crown"
+name = "Queen's Crown"
 scene = ExtResource("2_vrdps")
 type = "headgear"
 icon = ExtResource("1_uucrk")

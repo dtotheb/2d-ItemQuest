@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7co3k5ljpio0"]
+[gd_scene load_steps=13 format=3 uid="uid://b7co3k5ljpio0"]
 
 [ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_s71am"]
 [ext_resource type="PackedScene" uid="uid://spqde775vlw" path="res://player/player.tscn" id="2_koljr"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://e83a7lv628ew" path="res://items/coin.tres" id="4_oabba"]
 [ext_resource type="PackedScene" uid="uid://cv5a2t8tskcfl" path="res://inventoryDialog/inventory_dialog.tscn" id="6_oxg4r"]
 [ext_resource type="Script" path="res://UIRoot.gd" id="6_wwjbj"]
+[ext_resource type="Resource" uid="uid://wb4tkchtmbqd" path="res://all_recipes.tres" id="7_jdgir"]
 [ext_resource type="PackedScene" uid="uid://d0vjhdnlqwk47" path="res://craftingDialog/crafting_dialog.tscn" id="8_0alqr"]
 [ext_resource type="Resource" uid="uid://du6m6xkmmy6v1" path="res://items/crown1.tres" id="9_b8ub8"]
 
@@ -3290,6 +3291,7 @@ item = ExtResource("4_oabba")
 
 [node name="UIRoot" type="CanvasLayer" parent="."]
 script = ExtResource("6_wwjbj")
+all_recipes = ExtResource("7_jdgir")
 
 [node name="InventoryDialog" parent="UIRoot" instance=ExtResource("6_oxg4r")]
 unique_name_in_owner = true
