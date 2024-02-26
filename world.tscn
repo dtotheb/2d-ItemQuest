@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7co3k5ljpio0"]
+[gd_scene load_steps=12 format=3 uid="uid://b7co3k5ljpio0"]
 
 [ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_s71am"]
 [ext_resource type="PackedScene" uid="uid://spqde775vlw" path="res://player/player.tscn" id="2_koljr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cv5a2t8tskcfl" path="res://inventoryDialog/inventory_dialog.tscn" id="6_oxg4r"]
 [ext_resource type="Script" path="res://UIRoot.gd" id="6_wwjbj"]
 [ext_resource type="PackedScene" uid="uid://d0vjhdnlqwk47" path="res://craftingDialog/crafting_dialog.tscn" id="8_0alqr"]
+[ext_resource type="Resource" uid="uid://du6m6xkmmy6v1" path="res://items/crown1.tres" id="9_b8ub8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvkp5"]
 texture = ExtResource("1_s71am")
@@ -3283,6 +3284,10 @@ item = ExtResource("4_bvjkh")
 position = Vector2(98, 74)
 item = ExtResource("4_oabba")
 
+[node name="coin2" parent="coin2" instance=ExtResource("3_dtc3j")]
+position = Vector2(-25, 0)
+item = ExtResource("4_oabba")
+
 [node name="UIRoot" type="CanvasLayer" parent="."]
 script = ExtResource("6_wwjbj")
 
@@ -3315,3 +3320,15 @@ offset_right = 383.0
 offset_bottom = 216.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Pickup" parent="." instance=ExtResource("3_dtc3j")]
+position = Vector2(98, 97)
+item = ExtResource("9_b8ub8")
+
+[node name="Pickup2" parent="." instance=ExtResource("3_dtc3j")]
+position = Vector2(72, 97)
+item = ExtResource("9_b8ub8")
+
+[node name="coin3" parent="." instance=ExtResource("3_dtc3j")]
+position = Vector2(45, 74)
+item = ExtResource("4_oabba")

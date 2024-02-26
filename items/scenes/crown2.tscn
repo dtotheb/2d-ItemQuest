@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctt73c3cchvp1"]
+
+[ext_resource type="Texture2D" uid="uid://c2xn3qlvf1tk2" path="res://items/icons/crown2.png" id="1_vt6jl"]
+
+[node name="Crown" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_vt6jl")
