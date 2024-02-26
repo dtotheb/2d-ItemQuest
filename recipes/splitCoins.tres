@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=4 format=3 uid="uid://5ejddxxggq8d"]
+
+[ext_resource type="Resource" uid="uid://e83a7lv628ew" path="res://items/coin.tres" id="1_67chu"]
+[ext_resource type="Resource" uid="uid://ucaw6ci1peee" path="res://items/coinStack.tres" id="2_xdw6q"]
+[ext_resource type="Script" path="res://recipe.gd" id="3_40jdo"]
+
+[resource]
+script = ExtResource("3_40jdo")
+name = "Coins"
+ingredients = Array[Resource("res://items/scripts/item.gd")]([ExtResource("2_xdw6q")])
+results = Array[Resource("res://items/scripts/item.gd")]([ExtResource("1_67chu"), ExtResource("1_67chu"), ExtResource("1_67chu")])
