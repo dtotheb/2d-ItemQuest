@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://hua8fjo3yjix"]
+
+[ext_resource type="PackedScene" uid="uid://bgsx41vqrlcqo" path="res://inventoryDialog/item_slot.tscn" id="1_lthas"]
+[ext_resource type="Script" path="res://equipDialog/equip_dialog.gd" id="1_pwug0"]
+
+[node name="EquipDialog" type="PanelContainer"]
+offset_right = 122.0
+offset_bottom = 59.0
+script = ExtResource("1_pwug0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="LeftHand" parent="HBoxContainer" instance=ExtResource("1_lthas")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightHand" parent="HBoxContainer" instance=ExtResource("1_lthas")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3

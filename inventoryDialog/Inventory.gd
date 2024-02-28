@@ -1,6 +1,8 @@
 class_name Inventory
 
 var _content:Array[Item] = []
+var LeftHand:Item = null
+var RightHand:Item = null
 
 
 func add_item(item:Item):
@@ -9,6 +11,12 @@ func add_item(item:Item):
 	
 func remove_item(item:Item):
 	_content.erase(item)
+	
+func equipHand(hand:String, item:Item):
+	if hand =="Left":
+		LeftHand = item
+	elif hand == "Right":
+		RightHand = item
 	
 	
 func get_items() -> Array[Item]:

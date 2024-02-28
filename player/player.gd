@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-var myWeapon = null
 var inventory:Inventory = Inventory.new()
 
 func _physics_process(_delta):
@@ -27,14 +26,15 @@ func _physics_process(_delta):
 
 
 func pickupWeapon(weapon:Item):
-	if myWeapon == null:
-		myWeapon = weapon
-		var newWeapon = weapon.scene.instantiate()
-		$Hand.add_child(newWeapon)
-	else:
-		pass
+	if inventory.LeftHand == null:
+		inventory.equipHand("Left", weapon)
+	elif inventory.RightHand == null:
+		inventory.equipHand("Right", weapon)
 	
 
 func _on_item_pickup(item:Item):
-	inventory.add_item(item)
+	if item.type == "weapon":
+		pickupWeapon(item)
+	else:
+		inventory.add_item(item)
 
