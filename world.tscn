@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7co3k5ljpio0"]
+[gd_scene load_steps=15 format=3 uid="uid://b7co3k5ljpio0"]
 
 [ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_s71am"]
 [ext_resource type="PackedScene" uid="uid://spqde775vlw" path="res://player/player.tscn" id="2_koljr"]
@@ -10,6 +10,8 @@
 [ext_resource type="Resource" uid="uid://wb4tkchtmbqd" path="res://all_recipes.tres" id="7_jdgir"]
 [ext_resource type="PackedScene" uid="uid://d0vjhdnlqwk47" path="res://craftingDialog/crafting_dialog.tscn" id="8_0alqr"]
 [ext_resource type="Resource" uid="uid://du6m6xkmmy6v1" path="res://items/crown1.tres" id="9_b8ub8"]
+[ext_resource type="PackedScene" uid="uid://bwn5x5l6d60yt" path="res://chest/chest.tscn" id="11_4iea5"]
+[ext_resource type="Resource" uid="uid://ucaw6ci1peee" path="res://items/coinStack.tres" id="12_7n4si"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvkp5"]
 texture = ExtResource("1_s71am")
@@ -3334,3 +3336,7 @@ item = ExtResource("9_b8ub8")
 [node name="coin3" parent="." instance=ExtResource("3_dtc3j")]
 position = Vector2(45, 74)
 item = ExtResource("4_oabba")
+
+[node name="Chest" parent="." instance=ExtResource("11_4iea5")]
+position = Vector2(44, 100)
+contents = Array[Resource("res://items/scripts/item.gd")]([ExtResource("12_7n4si"), ExtResource("12_7n4si"), ExtResource("12_7n4si")])

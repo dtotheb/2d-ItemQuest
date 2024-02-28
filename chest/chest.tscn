@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwn5x5l6d60yt"]
+
+[ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_8ne6s"]
+[ext_resource type="Script" path="res://chest/chest.gd" id="1_lre7s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfxug"]
+atlas = ExtResource("1_8ne6s")
+region = Rect2(136, 102, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhiys"]
+atlas = ExtResource("1_8ne6s")
+region = Rect2(153, 102, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f530w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfxug")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhiys")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2bw1"]
+size = Vector2(14, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ret0n"]
+size = Vector2(22.5, 20.75)
+
+[node name="Chest" type="Node2D"]
+script = ExtResource("1_lre7s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_f530w")
+animation = &"closed"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/StaticBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_y2bw1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ret0n")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
