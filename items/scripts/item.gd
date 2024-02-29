@@ -5,3 +5,4 @@ extends Resource
 @export var scene:PackedScene
 @export var type:String
 @export var icon:Texture2D
+@export var value:int = 0

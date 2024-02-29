@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://equipDialog/equip_dialog.gd" id="1_pwug0"]
 
 [node name="EquipDialog" type="PanelContainer"]
-offset_right = 122.0
-offset_bottom = 59.0
+offset_right = 120.0
+offset_bottom = 60.0
 script = ExtResource("1_pwug0")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

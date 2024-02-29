@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 var inventory:Inventory = Inventory.new()
+var coins:int = 0
 
 func _physics_process(_delta):
 
@@ -31,9 +32,15 @@ func pickupWeapon(weapon:Item):
 	elif inventory.RightHand == null:
 		inventory.equipHand("Right", weapon)
 	
+func addCoins(item:Item):
+	coins += item.value
+	print(coins)
 
 func _on_item_pickup(item:Item):
-	if item.type == "weapon":
+
+	if item.type == "coin":
+		addCoins(item)
+	elif item.type == "weapon":
 		pickupWeapon(item)
 	else:
 		inventory.add_item(item)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7co3k5ljpio0"]
+[gd_scene load_steps=17 format=3 uid="uid://b7co3k5ljpio0"]
 
 [ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_s71am"]
 [ext_resource type="PackedScene" uid="uid://spqde775vlw" path="res://player/player.tscn" id="2_koljr"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://du6m6xkmmy6v1" path="res://items/crown1.tres" id="9_b8ub8"]
 [ext_resource type="PackedScene" uid="uid://hua8fjo3yjix" path="res://equipDialog/equip_dialog.tscn" id="10_5wofw"]
 [ext_resource type="PackedScene" uid="uid://bwn5x5l6d60yt" path="res://chest/chest.tscn" id="11_4iea5"]
+[ext_resource type="PackedScene" uid="uid://3bul70hr7lx2" path="res://coinCounter/coin_dialog.tscn" id="11_jqbxx"]
 [ext_resource type="Resource" uid="uid://ucaw6ci1peee" path="res://items/coinStack.tres" id="12_7n4si"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvkp5"]
@@ -3294,7 +3295,11 @@ item = ExtResource("4_bvjkh")
 position = Vector2(98, 74)
 item = ExtResource("4_oabba")
 
-[node name="coin2" parent="coin2" instance=ExtResource("3_dtc3j")]
+[node name="coin3" parent="coin2" instance=ExtResource("3_dtc3j")]
+position = Vector2(-53, 0)
+item = ExtResource("4_oabba")
+
+[node name="coin4" parent="coin2" instance=ExtResource("3_dtc3j")]
 position = Vector2(-25, 0)
 item = ExtResource("4_oabba")
 
@@ -3341,6 +3346,11 @@ offset_left = -61.0
 offset_right = 61.0
 grow_horizontal = 2
 
+[node name="coinDialog" parent="UIRoot" instance=ExtResource("11_jqbxx")]
+unique_name_in_owner = true
+offset_left = 637.0
+offset_right = 757.0
+
 [node name="Pickup" parent="." instance=ExtResource("3_dtc3j")]
 position = Vector2(98, 97)
 item = ExtResource("9_b8ub8")
@@ -3348,10 +3358,6 @@ item = ExtResource("9_b8ub8")
 [node name="Pickup2" parent="." instance=ExtResource("3_dtc3j")]
 position = Vector2(72, 97)
 item = ExtResource("9_b8ub8")
-
-[node name="coin3" parent="." instance=ExtResource("3_dtc3j")]
-position = Vector2(45, 74)
-item = ExtResource("4_oabba")
 
 [node name="Chest" parent="." instance=ExtResource("11_4iea5")]
 position = Vector2(296, 55)
