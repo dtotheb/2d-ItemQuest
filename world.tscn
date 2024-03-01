@@ -3270,10 +3270,11 @@ sources/0 = SubResource("TileSetAtlasSource_pvkp5")
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
+position = Vector2(1, 0)
 tile_set = SubResource("TileSet_ab4kk")
 format = 2
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(0, 1179648, 0, 65536, 1179648, 1, 131072, 1179648, 1, 1, 1245184, 0, 2, 1245184, 0, 3, 1245184, 0, 4, 1245184, 0, 5, 1245184, 0, 196608, 1179648, 1, 262144, 1179648, 1, 327680, 1179648, 1, 6, 1245184, 0, 7, 1245184, 0, 8, 1310720, 0, 65544, 1310720, 1, 131080, 1245184, 805306371, 524294, 1245184, 2, 524295, 1245184, 2, 393224, 1310720, 1, 458760, 1310720, 1, 524296, 1310720, 2, 393216, 1179648, 1, 458752, 1179648, 1, 524288, 1179648, 2, 524289, 1245184, 2, 524290, 1245184, 2, 393225, 1245184, 0, 393226, 1245184, 0, 393227, 1245184, 0, 393228, 1245184, 0, 131081, 1245184, 0, 131082, 1245184, 0, 131083, 1245184, 0, 131084, 1245184, 0, 131085, 1245184, 0, 393229, 1245184, 0, 589826, 1310720, 1, 655362, 1310720, 1, 720898, 1310720, 1, 786434, 1310720, 1, 589830, 1179648, 1, 655366, 1179648, 1, 720902, 1179648, 1, 786438, 1179648, 1, 851974, 1179648, 1, 851970, 1310720, 1, 196617, 524288, 5, 196618, 524288, 5, 262154, 524288, 5, 262155, 524288, 5, 262156, 524288, 5, 327692, 524288, 5, 327693, 524288, 5, 327691, 524288, 5, 327690, 524288, 5, 327689, 524288, 5, 262153, 524288, 5, 196619, 524288, 5, 196620, 524288, 5, 196621, 524288, 5, 262157, 524288, 5, 262159, 393216, 9, 196623, 655360, 17, 131087, 655360, 17, 131086, 655360, 17, 393230, 655360, 17, 393231, 655360, 17, 327695, 655360, 17, 393232, 655360, 17, 393234, 655360, 17, 393235, 655360, 17, 131088, 655360, 17, 131090, 655360, 17, 131091, 655360, 17, 196627, 655360, 17, 327699, 655360, 17)
+layer_0/tile_data = PackedInt32Array(0, 1179648, 0, 65536, 1179648, 1, 131072, 1179648, 1, 1, 1245184, 0, 2, 1245184, 0, 3, 1245184, 0, 4, 1245184, 0, 5, 1245184, 0, 196608, 1179648, 1, 262144, 1179648, 1, 327680, 1179648, 1, 6, 1245184, 0, 7, 1245184, 0, 8, 1310720, 0, 65544, 1310720, 1, 131080, 1245184, 805306371, 524294, 1245184, 2, 524295, 1245184, 2, 393224, 1310720, 1, 458760, 1310720, 1, 524296, 1310720, 2, 393216, 1179648, 1, 458752, 1179648, 1, 524288, 1179648, 2, 524289, 1245184, 2, 524290, 1245184, 2, 393225, 1245184, 0, 393226, 1245184, 0, 393227, 1245184, 0, 393228, 1245184, 0, 131081, 1245184, 0, 131082, 1245184, 0, 131083, 1245184, 0, 131084, 1245184, 0, 131085, 1245184, 0, 393229, 1245184, 0, 589826, 1310720, 1, 655362, 1310720, 1, 720898, 1310720, 1, 786434, 1310720, 1, 589830, 1179648, 1, 655366, 1179648, 1, 720902, 1179648, 1, 786438, 1179648, 1, 851974, 1179648, 1, 851970, 1310720, 1, 196617, 524288, 5, 196618, 524288, 5, 262154, 524288, 5, 262155, 524288, 5, 262156, 524288, 5, 327692, 524288, 5, 327693, 524288, 5, 327691, 524288, 5, 327690, 524288, 5, 327689, 524288, 5, 262153, 524288, 5, 196619, 524288, 5, 196620, 524288, 5, 196621, 524288, 5, 262157, 524288, 5, 262159, 393216, 9, 196623, 655360, 17, 131087, 655360, 17, 131086, 655360, 17, 393230, 655360, 17, 393231, 655360, 17, 327695, 655360, 17, 393232, 655360, 17, 393234, 655360, 17, 393235, 655360, 17, 131088, 655360, 17, 131090, 655360, 17, 131091, 655360, 17, 196627, 655360, 17, 327699, 655360, 17, 458767, 655360, 17, 524303, 655360, 17, 589839, 655360, 17, 655375, 655360, 17, 458771, 655360, 17, 524307, 655360, 17, 589843, 655360, 17, 655379, 655360, 17, 720915, 655360, 17, 720914, 655360, 17, 720911, 655360, 17, 720912, 655360, 17, 393236, 655360, 17, 393237, 655360, 17, 393238, 655360, 17, 393239, 655360, 17, 393240, 655360, 17, 393241, 655360, 17, 393242, 655360, 17, 327706, 655360, 17, 196634, 655360, 17, 131098, 655360, 17, 131097, 655360, 17, 131096, 655360, 17, 131095, 655360, 17, 131094, 655360, 17, 131093, 655360, 17, 131092, 655360, 17, 262170, 655360, 17, 720913, 655360, 17)
 layer_1/y_sort_enabled = true
 layer_1/tile_data = PackedInt32Array(262153, 983040, 5, 262154, 1048576, 5, 262155, 1048576, 5, 262156, 1048576, 5, 262157, 983040, 268435461)
 
@@ -3284,25 +3285,6 @@ position = Vector2(36, 31)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(38, 43)
 zoom = Vector2(4, 4)
-
-[node name="SwordPickup" parent="." instance=ExtResource("3_dtc3j")]
-position = Vector2(98, 33)
-
-[node name="staff" parent="." instance=ExtResource("3_dtc3j")]
-position = Vector2(98, 53)
-item = ExtResource("4_bvjkh")
-
-[node name="coin2" parent="." instance=ExtResource("3_dtc3j")]
-position = Vector2(98, 74)
-item = ExtResource("4_oabba")
-
-[node name="coin3" parent="coin2" instance=ExtResource("3_dtc3j")]
-position = Vector2(-53, 0)
-item = ExtResource("4_oabba")
-
-[node name="coin4" parent="coin2" instance=ExtResource("3_dtc3j")]
-position = Vector2(-25, 0)
-item = ExtResource("4_oabba")
 
 [node name="UIRoot" type="CanvasLayer" parent="."]
 script = ExtResource("6_wwjbj")
@@ -3352,16 +3334,8 @@ unique_name_in_owner = true
 offset_left = 637.0
 offset_right = 757.0
 
-[node name="Pickup" parent="." instance=ExtResource("3_dtc3j")]
-position = Vector2(98, 97)
-item = ExtResource("9_b8ub8")
-
-[node name="Pickup2" parent="." instance=ExtResource("3_dtc3j")]
-position = Vector2(72, 97)
-item = ExtResource("9_b8ub8")
-
 [node name="Chest" parent="." instance=ExtResource("11_4iea5")]
-position = Vector2(296, 55)
+position = Vector2(406, 70)
 contents = Array[Resource("res://items/scripts/item.gd")]([ExtResource("12_7n4si"), ExtResource("12_7n4si"), ExtResource("12_7n4si")])
 
 [node name="Doors" type="Node2D" parent="."]
@@ -3374,3 +3348,34 @@ position = Vector2(280, 104)
 
 [node name="Door3" parent="Doors" instance=ExtResource("15_1vo1r")]
 position = Vector2(312, 72)
+
+[node name="Pickups" type="Node2D" parent="."]
+
+[node name="Pickup" parent="Pickups" instance=ExtResource("3_dtc3j")]
+position = Vector2(98, 97)
+item = ExtResource("9_b8ub8")
+
+[node name="Pickup2" parent="Pickups" instance=ExtResource("3_dtc3j")]
+position = Vector2(72, 97)
+item = ExtResource("9_b8ub8")
+
+[node name="SwordPickup" parent="Pickups" instance=ExtResource("3_dtc3j")]
+position = Vector2(98, 33)
+
+[node name="staff" parent="Pickups" instance=ExtResource("3_dtc3j")]
+position = Vector2(98, 53)
+item = ExtResource("4_bvjkh")
+
+[node name="coins" type="Node2D" parent="Pickups"]
+
+[node name="coin3" parent="Pickups/coins" instance=ExtResource("3_dtc3j")]
+position = Vector2(45, 74)
+item = ExtResource("4_oabba")
+
+[node name="coin4" parent="Pickups/coins" instance=ExtResource("3_dtc3j")]
+position = Vector2(73, 74)
+item = ExtResource("4_oabba")
+
+[node name="coin2" parent="Pickups/coins" instance=ExtResource("3_dtc3j")]
+position = Vector2(98, 74)
+item = ExtResource("4_oabba")

@@ -34,7 +34,6 @@ func pickupWeapon(weapon:Item):
 	
 func addCoins(item:Item):
 	coins += item.value
-	print(coins)
 
 func _on_item_pickup(item:Item):
 
