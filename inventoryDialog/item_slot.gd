@@ -13,6 +13,7 @@ func showToolTip():
 		var name_label = Label.new()
 		name_label.text = _item.name
 		name_label.position = get_local_mouse_position()
+		print(_item.name , " " , name_label)
 		$Labels.add_child(name_label)
 		
 
