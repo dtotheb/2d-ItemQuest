@@ -18,7 +18,13 @@ func _process(delta):
 		
 func _unhandled_input(event):
 	if event.is_action_released("inventory"):
-		inventory_dialog.open(player.inventory)
+		if !inventory_dialog.is_visible():
+			inventory_dialog.open(player.inventory)
+		else:
+			inventory_dialog._on_close_button_pressed()
 	if event.is_action_released("crafting"):
-		crafting_dialog.open(_all_recipes,player.inventory)
+		if !crafting_dialog.is_visible():
+			crafting_dialog.open(_all_recipes,player.inventory)
+		else:
+			crafting_dialog._on_close_button_pressed()
 	

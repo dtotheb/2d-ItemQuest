@@ -3293,41 +3293,24 @@ all_recipes = ExtResource("7_jdgir")
 [node name="InventoryDialog" parent="UIRoot" instance=ExtResource("6_oxg4r")]
 unique_name_in_owner = true
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = -489.0
-offset_bottom = -289.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -86.0
+offset_top = -29.0
+offset_right = 1.0
+offset_bottom = 6.0
 
 [node name="CraftingDialog" parent="UIRoot" instance=ExtResource("8_0alqr")]
 unique_name_in_owner = true
 visible = false
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 383.0
-offset_bottom = 216.0
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = -244.0
+offset_top = -129.0
+offset_right = -2.0
+offset_bottom = 3.0
 
 [node name="EquipDialog" parent="UIRoot" instance=ExtResource("10_5wofw")]
 unique_name_in_owner = true
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
 offset_left = -61.0
 offset_right = 61.0
-grow_horizontal = 2
+scale = Vector2(1, 1)
 
 [node name="coinDialog" parent="UIRoot" instance=ExtResource("11_jqbxx")]
 unique_name_in_owner = true
@@ -3341,10 +3324,10 @@ contents = Array[Resource("res://items/scripts/item.gd")]([ExtResource("12_7n4si
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("15_1vo1r")]
-position = Vector2(280, 40)
+position = Vector2(281, 40)
 
 [node name="Door2" parent="Doors" instance=ExtResource("15_1vo1r")]
-position = Vector2(280, 104)
+position = Vector2(281, 104)
 
 [node name="Door3" parent="Doors" instance=ExtResource("15_1vo1r")]
 position = Vector2(312, 72)
