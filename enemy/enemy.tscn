@@ -67,6 +67,7 @@ delay_seconds = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Vision"]
 shape = SubResource("CircleShape2D_iqtto")
 
+[connection signal="state_entered" from="StateChart/CompoundState/idle" to="." method="_on_idle_state_entered"]
 [connection signal="state_processing" from="StateChart/CompoundState/active" to="." method="_on_active_state_processing"]
 [connection signal="body_entered" from="Vision" to="." method="_on_vision_body_entered"]
 [connection signal="body_exited" from="Vision" to="." method="_on_vision_body_exited"]

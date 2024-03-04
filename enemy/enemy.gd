@@ -1,7 +1,13 @@
 extends CharacterBody2D
 
 var _target
+var _health
 @export var speed:int = 150
+@export var hitpoints:int = 10
+
+
+func _ready():
+	_health = hitpoints
 
 func _on_vision_body_entered(body):
 	if body.name == "Player":
@@ -23,4 +29,12 @@ func _on_active_state_processing(delta):
 	var direction:Vector2 = _target.global_position - global_position
 	velocity = direction.normalized() * speed
 	move_and_slide()
-	
+
+func takeDamage(damage):
+	_health -= damage
+	if _health <= 0:
+		queue_free()
+
+
+func _on_idle_state_entered():
+	_target = null

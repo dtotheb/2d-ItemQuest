@@ -5,6 +5,8 @@ const SPEED = 300.0
 var inventory:Inventory = Inventory.new()
 var coins:int = 0
 
+@export var attackScene:PackedScene
+
 func _physics_process(_delta):
 
 
@@ -21,10 +23,19 @@ func _physics_process(_delta):
 		velocity.y = directionY * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+		
+	if Input.is_action_just_released("ui_accept"):
+		attack("Left")
 	
 
 	move_and_slide()
 
+func attack(hand:String):
+	if hand == "Left":
+		if inventory.LeftHand:
+			var newAttack = attackScene.instantiate()
+			newAttack.position = $Hand.position
+			$Hand.add_child(newAttack)
 
 func pickupWeapon(weapon:Item):
 	if inventory.LeftHand == null:
