@@ -10,3 +10,4 @@ name = "King's Crown"
 scene = ExtResource("2_8dtig")
 type = "headgear"
 icon = ExtResource("1_juffn")
+value = 0

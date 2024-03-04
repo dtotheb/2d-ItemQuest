@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b7co3k5ljpio0"]
+[gd_scene load_steps=19 format=3 uid="uid://b7co3k5ljpio0"]
 
 [ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_s71am"]
 [ext_resource type="PackedScene" uid="uid://spqde775vlw" path="res://player/player.tscn" id="2_koljr"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://3bul70hr7lx2" path="res://coinCounter/coin_dialog.tscn" id="11_jqbxx"]
 [ext_resource type="Resource" uid="uid://ucaw6ci1peee" path="res://items/coinStack.tres" id="12_7n4si"]
 [ext_resource type="PackedScene" uid="uid://hl43hni286km" path="res://door/door.tscn" id="15_1vo1r"]
+[ext_resource type="PackedScene" uid="uid://b183kwgsbdx67" path="res://enemy/enemy.tscn" id="16_bea4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pvkp5"]
 texture = ExtResource("1_s71am")
@@ -3362,3 +3363,6 @@ item = ExtResource("4_oabba")
 [node name="coin2" parent="Pickups/coins" instance=ExtResource("3_dtc3j")]
 position = Vector2(98, 74)
 item = ExtResource("4_oabba")
+
+[node name="Enemy" parent="." instance=ExtResource("16_bea4u")]
+position = Vector2(129, 17)

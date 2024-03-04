@@ -1,6 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b183kwgsbdx67"]
+[gd_scene load_steps=11 format=3 uid="uid://b183kwgsbdx67"]
 
+[ext_resource type="Script" path="res://enemy/enemy.gd" id="1_up02g"]
 [ext_resource type="Texture2D" uid="uid://bld27o1j3h6u0" path="res://art/colored-transparent.png" id="1_v40wg"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="2_nnuan"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="3_40u5n"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/atomic_state.gd" id="4_nhtrk"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="6_1qi5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vy4j"]
 size = Vector2(17, 17)
@@ -20,7 +25,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_iqtto"]
+radius = 29.4279
+
 [node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_up02g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2vy4j")
@@ -28,3 +37,36 @@ shape = SubResource("RectangleShape2D_2vy4j")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_u8hdp")
+
+[node name="StateChart" type="Node" parent="."]
+script = ExtResource("2_nnuan")
+
+[node name="CompoundState" type="Node" parent="StateChart"]
+script = ExtResource("3_40u5n")
+initial_state = NodePath("idle")
+
+[node name="idle" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("4_nhtrk")
+
+[node name="toActive" type="Node" parent="StateChart/CompoundState/idle"]
+script = ExtResource("6_1qi5p")
+to = NodePath("../../active")
+event = &"playerEntered"
+
+[node name="active" type="Node" parent="StateChart/CompoundState"]
+script = ExtResource("4_nhtrk")
+
+[node name="toIdle" type="Node" parent="StateChart/CompoundState/active"]
+script = ExtResource("6_1qi5p")
+to = NodePath("../../idle")
+event = &"playerLeft"
+delay_seconds = 1.0
+
+[node name="Vision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vision"]
+shape = SubResource("CircleShape2D_iqtto")
+
+[connection signal="state_processing" from="StateChart/CompoundState/active" to="." method="_on_active_state_processing"]
+[connection signal="body_entered" from="Vision" to="." method="_on_vision_body_entered"]
+[connection signal="body_exited" from="Vision" to="." method="_on_vision_body_exited"]
